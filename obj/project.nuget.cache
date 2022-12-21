@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SM+RKZfvT0HvqypiRTskrXBLBReqqngTkkn3W++XPOqpvsjjIQvp8OTqq9cUXgykzmN8d0lh5o0W7ELAjkd62A==",
+  "dgSpecHash": "zBWTmh3nWf1D0oUZz1vZropEprxtHur/OpuTbJjwfTF84L2CIDZJP+Y4RCV2Q8/ElDO5zcsbnRO23KWM/G3Paw==",
   "success": true,
   "projectFilePath": "E:\\Projetos\\Distancia\\CalcularDistancia\\CalcularDistancia.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pedro\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
