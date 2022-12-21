@@ -1,0 +1,15 @@
+E:\Projetos\Distancia\CalcularDistancia\bin\Debug\net7.0\CalcularDistancia.exe
+E:\Projetos\Distancia\CalcularDistancia\bin\Debug\net7.0\CalcularDistancia.deps.json
+E:\Projetos\Distancia\CalcularDistancia\bin\Debug\net7.0\CalcularDistancia.runtimeconfig.json
+E:\Projetos\Distancia\CalcularDistancia\bin\Debug\net7.0\CalcularDistancia.dll
+E:\Projetos\Distancia\CalcularDistancia\bin\Debug\net7.0\CalcularDistancia.pdb
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\CalcularDistancia.csproj.AssemblyReference.cache
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\CalcularDistancia.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\CalcularDistancia.AssemblyInfoInputs.cache
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\CalcularDistancia.AssemblyInfo.cs
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\CalcularDistancia.csproj.CoreCompileInputs.cache
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\CalcularDistancia.dll
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\refint\CalcularDistancia.dll
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\CalcularDistancia.pdb
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\CalcularDistancia.genruntimeconfig.cache
+E:\Projetos\Distancia\CalcularDistancia\obj\Debug\net7.0\ref\CalcularDistancia.dll

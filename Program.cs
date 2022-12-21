@@ -1,65 +1,40 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Exercicio1
+namespace Exercicio2
 {
     class Program
     {
-
-        static private int[,] fillDistances(int numCities) 
+        // encontre o caminho da área de trabalho do usuário
+        static string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        static private (int[,], int) fillDistances() 
         {
+            // leia a matriz de distâncias do arquivo
+            string[] lines = File.ReadAllLines(desktopPath + "\\matriz.txt");
+            int numCities = lines.Length;
+
             int[,] distances = new int[numCities, numCities]; // numCities é o número de cidades
 
             for (int i = 0; i < numCities; i++)
             {
+                string[] values = lines[i].Split(',');
                 for (int j = 0; j < numCities; j++)
                 {
-                    if (i != j && distances[i, j] == 0) // não precisa perguntar a distância entre uma cidade e ela mesma, que é sempre 0
-                    {   
-                        int value = readValue(i, j);
-
-                        distances[i, j] = value;
-                        distances[j, i] = value;
-                    }
+                    distances[i, j] = int.Parse(values[j]);
                 }
             }
 
-            return distances;
+            return (distances, numCities);
         }  
-
-        static private int readValue(int i, int j) 
+        static private int[] getRoute(int numCities)
         {
-            int read;
-                        
-            while(true)
-            {
-                Console.WriteLine($"Informe a distância entre as cidades {i+1} e {j+1}: ");
+            string line = File.ReadAllLines(desktopPath + "\\caminho.txt")[0];
 
-                if (int.TryParse(Console.ReadLine(), out read) && read > 0) break;
-
-                Console.WriteLine("Digite um valor válido");
+            if (Regex.IsMatch(line, "([1-5][,][1-5])+$")) {
+                return Program.transformStringToArray(line);
             }
 
-            return read;
-        }
-
-        static private string askRoute(int numCities)   
-        {
-            string route;
-
-            while(true)
-            {
-                Console.WriteLine("Informe o percurso: ");
-                var line = Console.ReadLine();
-
-                route = line == null ? "" : line;
-
-                if (Regex.IsMatch(route, "([1-5][,][1-5])+$")) break;
-
-                Console.WriteLine("Digite um percurso válido.");
-            }
-
-            return route;
+            throw new Exception("Percurso não está no padrão correto.");
         }
 
         static private int[] transformStringToArray(string route)
@@ -94,13 +69,9 @@ namespace Exercicio1
 
         static void Main(string[] args)
         {
-            int numCities = 5;
+            (int[,] distances, int numCities) = Program.fillDistances();
 
-            int[,] distances = Program.fillDistances(numCities);
-
-            string routeString = Program.askRoute(numCities);
-
-            int[] route = Program.transformStringToArray(routeString);
+            int[] route = Program.getRoute(numCities);
 
             int distance = Program.calculateDistance(distances, route);
 
